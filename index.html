@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BMI 管理</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="./css/all.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="centerFlex">
+        <div class="logo">
+          <img src="./images/bmi_logo.png" class="logo" alt="BMI calculator">
+        </div>
+        <div class="inputArea">
+          <div class="input-group">
+            <label for="height">身高 cm</label>
+            <input type="text" class="form-control height" id="height" placeholder="請輸入身高">
+          </div>
+          <div class="input-group">
+            <label for="weight">體重 kg</label>
+            <input type="text" class="form-control weight" id="weight" placeholder="請輸入體重">
+          </div>
+        </div>
+        <div class="result_btn">
+          <div class="result centerFlex">
+            <p>看結果</p>
+          </div>
+          <!-- <div class="calculation">
+            <div class="calculation_result" style="border: 6px solid #86D73F; color:#86D73F">
+              <div class="calculation_result_text">
+                <p>20.90</p><span>BMI</span>
+              </div>
+              <div class="reset" style="background-color:#86D73F">
+                <i class="fas fa-redo"></i>
+              </div>
+            </div>
+            <div class="calculation_text" style="color:#86D73F">理想</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="record">
+    <div class="container">
+      <h3 class="record_title">BMI 紀錄</h3>
+      <ul class="record_list">
+        <!-- <li class="record_list_item">
+          <div class="status"></div>
+          <p class="item_status">理想</p>
+          <p class="item_value">
+            <span class="value_title">BMI</span>20.90
+          </p>
+          <p class="item_value">
+            <span class="value_title">weight</span>70kg
+          </p>
+          <p class="item_value">
+            <span class="value_title">height</span>180cm
+          </p>
+          <p class="item_date">06-19-2019</p>
+        </li> -->
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img class="footer_logo" src="./images/bmi_logo_footer.png" alt="BMI calculator"/>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-database.js"></script>
+  <script src="./js/all.js"></script>
+</body>
+</html>

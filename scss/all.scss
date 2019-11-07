@@ -1,0 +1,212 @@
+$main-color: #424242;
+$second-color: #FFD366;
+$body-color: #e7e7e7;
+// BMI數值：理想 過輕 過重 輕度肥胖 中度肥胖 重度肥胖
+$bmi-normal: #86D73F;
+$bmi-light: #31BAF9;
+$bmi-heavy: #FF982D;
+$bmi-MildObesity: #FF6C03;
+$bmi-ModerateObesity: #FF6C03;
+$bmi-SevereObesity: #FF1200;
+
+*{
+  font-family: '微軟正黑體', Arial, serif;
+  position: relative;
+}
+
+body,html{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  height: 100vh;
+}
+
+.calculation{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  &_result{
+    width: 123px;
+    height: 123px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // float: left;
+    margin-right: 18px;
+    &_text{
+      text-align: center;
+      p{
+        margin: 0;
+        font-size: 32px;
+        line-height: 38px;
+      }
+      span{
+        display: block;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+    .reset{
+      width: 30px;
+      height: 30px;
+      border: $main-color solid 3px;
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .fa-redo{
+        color: $main-color
+      }
+    }
+  };
+  &_text{
+    // float: left;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.container{
+  width: 1024px;
+  margin: 0 auto;
+}
+.centerFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status{
+  display: block;
+  width: 7px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header{
+  background-color: $main-color;
+  padding-top: 74px;
+  padding-bottom: 74px;
+  .logo{
+    display: inline-block;
+    margin-right: 97px;
+    width: 117px;
+    height: 117px;
+  }
+  .inputArea{
+    display: inline-block;
+    margin-right: 53px;
+    .input-group{
+      width: 250px;
+      color: $second-color;
+      font-size: 18px;
+      line-height: 21px;
+      label{
+        display: block;
+        margin-bottom: 7px;
+      }
+      input{
+        width: 214px;
+        border: none;
+        border: solid 2px $second-color;
+        padding: 8px 16px;
+        background-color: rgba(white, .18);
+        border-radius: 10px;
+      }
+      input[placeholder], [placeholder], *[placeholder] {
+        font-size: 24px;
+        color: rgba(white, .5);
+        line-height: 28px;
+      }
+      &:first-child{
+        margin-bottom: 23px;
+      }
+    }
+  }
+  .result{
+    width: 120px;
+    height: 120px;
+    background-color: $second-color;
+    border-radius: 50%;
+    cursor: pointer;
+    p{
+      margin: 0;
+      font-size: 24px;
+      line-height: 25px;
+      color: $main-color;
+    }
+  }
+}
+
+.record{
+  padding: 48px 0px 74px 0px;
+  background-color: $body-color;
+  &_title{
+    margin: 0;
+    margin-bottom: 36px;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: $main-color;
+  }
+  &_list{
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    width: 624px;
+    &_item{
+      margin: 0 auto 16px auto;
+      padding: 21px 11px 21px 19px;
+      width: calc(100% - 30px);
+      background-color: white;
+      color: $main-color;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .item_status{
+      margin: 0;
+      font-size: 20px;
+      line-height: 23px;
+    }
+    .item_value{
+      margin: 0;
+      font-size: 20px;
+      line-height: 23px;
+      display: flex;
+      align-items: center;
+      .value_title{
+        font-size: 12px;
+        line-height: 15px;
+        margin-right: 7px;
+      }
+    }
+    .item_date{
+      margin: 0;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
+
+.footer{
+  background-color: $second-color;
+  padding: 18px 0;
+  &_logo{
+    display: block;
+    margin: 0 auto;
+  }
+}
