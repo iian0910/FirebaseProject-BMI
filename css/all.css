@@ -117,6 +117,24 @@ body {
   left: 0;
 }
 
+.delDate {
+  border: none;
+  border: 1px solid #dc3545;
+  background-color: transparent;
+  color: #dc3545;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.delDate:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
 .header {
   background-color: #424242;
   padding-top: 74px;

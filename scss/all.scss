@@ -1,6 +1,7 @@
 $main-color: #424242;
 $second-color: #FFD366;
 $body-color: #e7e7e7;
+$danger: #dc3545;
 // BMI數值：理想 過輕 過重 輕度肥胖 中度肥胖 重度肥胖
 $bmi-normal: #86D73F;
 $bmi-light: #31BAF9;
@@ -91,6 +92,22 @@ body{
   position: absolute;
   top: 0;
   left: 0;
+}
+.delDate{
+  border: none;
+  border: 1px solid $danger;
+  background-color: transparent;
+  color: $danger;
+  // padding: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover{
+    background-color: $danger;
+    color: white;
+  }
 }
 
 .header{

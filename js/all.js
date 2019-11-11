@@ -21,6 +21,7 @@ var list = document.querySelector('.record_list');
 var result_btn = document.querySelector('.result_btn');
 
 
+
 // Fn 程式區段 - 送出按鈕
 function sendFirebase(e) {
   e.preventDefault();
@@ -147,9 +148,22 @@ function firebaseDate(snapshot) {
                 <span class="value_title">height</span>${data[item].height}cm
               </p>
               <p class="item_date">${data[item].recordTime}</p>
+              <button class="delDate">
+                <i class="fas fa-trash-alt" data-id="${item}"></i>
+              </button>
             </li>`
   };
   list.innerHTML = str;
+
+  // remove firebase data
+  list.addEventListener('click', function(e){
+    e.preventDefault();
+    if(e.target.nodeName !== 'I'){return};
+    console.log(e.target.dataset.id);
+    var id = e.target.dataset.id;
+    BMIRef.child(id).remove();
+    list.innerHTML;
+  }, false)
 }
 
 // 傳送資料到Firebase
@@ -157,3 +171,4 @@ result.addEventListener('click', sendFirebase, false)
 
 // 從 Firebase 撈取資料並顯示
 BMIRef.on('value', firebaseDate, false);
+
